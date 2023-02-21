@@ -97,15 +97,40 @@ def playerTurn(player: dict, board: dict) -> dict:
     return playerTurn(player, board)
 
 
+def winCheck(board: dict, symbol: str) -> bool:
+    if board['a1'] == board['a2'] == board['a3'] == symbol:
+        return True
+    elif board['b1'] == board['b2'] == board['b3'] == symbol:
+        return True
+    elif board['c1'] == board['c2'] == board['c3'] == symbol:
+        return True
+    elif board['a1'] == board['b1'] == board['c1'] == symbol:
+        return True
+    elif board['a2'] == board['b2'] == board['c2'] == symbol:
+        return True
+    elif board['a3'] == board['b3'] == board['c3'] == symbol:
+        return True
+    elif board['a1'] == board['b2'] == board['c3'] == symbol:
+        return True
+    elif board['c1'] == board['b2'] == board['a3'] == symbol:
+        return True
+    return False
+
+
 def gameLoop():
     playerList = gameInit()
     baseBoard = listInitalizer()
     turn = 1
+    playing = True
 
-    while turn < 5:
+    while playing:
         turn = turn % 2
-        baseBoard = playerTurn(playerList[turn], baseBoard)
+        baseBoard = playerTurn(playerList[turn-1], baseBoard)
         boardPrint(baseBoard)
+        if winCheck(baseBoard, playerList[turn-1]['symbol']):
+            print(f'Congrats {playerList[turn-1]["name"]}, you won!')
+            playerList = updateScore(playerList, playerList[turn-1]["name"])
+            playing = False
         turn += 1
 
 
@@ -116,28 +141,4 @@ def gameLoop():
 
     return ''
 
-
-#boardPrint(listInitalizer())
-print(gameLoop())
-#print(gameInit())
-#print(customSymbol('John'))
-#print(boxChanger(listInitalizer(), 'a1', 'X'))
-
-def winCheck(board: dict) -> bool:
-    if board['a1'] == board['a2'] == board['a3']:
-        return True
-    elif board['b1'] == board['b2'] == board['b3']:
-        return True
-    elif board['c1'] == board['c2'] == board['c3']:
-        return True
-    elif board['a1'] == board['b1'] == board['c1']:
-        return True
-    elif board['a2'] == board['b2'] == board['c2']:
-        return True
-    elif board['a3'] == board['b3'] == board['c3']:
-        return True
-    elif board['a1'] == board['b2'] == board['c3']:
-        return True
-    elif board['c1'] == board['b2'] == board['a3']:
-        return True
-    return False
+gameLoop()
