@@ -1,9 +1,12 @@
 """
 Provided by Arve, 2023-02-21
 """
-sizeX = 9
-sizeY = 9
-symbols = ['a', 'b']
+import string
+sizeX = 3
+sizeY = 3
+symbols = [' ', 'a', 'b']
+board = [ 0, 0, 0, 0, 1, 2, 0, 2, 0]
+letters = list(string.ascii_lowercase)
 
 def getBoard(b):
     global sizeX, sizeY, symbols
@@ -27,4 +30,4 @@ def separator(len):
     out +="+\n"
     return out
 
-getBoard(1)
+print(getBoard(board))

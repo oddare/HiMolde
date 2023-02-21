@@ -100,10 +100,13 @@ def playerTurn(player: dict, board: dict) -> dict:
 def gameLoop():
     playerList = gameInit()
     baseBoard = listInitalizer()
-    turn = 0
+    turn = 1
 
-    while True:
-        break
+    while turn < 5:
+        turn = turn % 2
+        baseBoard = playerTurn(playerList[turn], baseBoard)
+        boardPrint(baseBoard)
+        turn += 1
 
 
     baseBoard = playerTurn(playerList[0], baseBoard)
@@ -119,3 +122,22 @@ print(gameLoop())
 #print(gameInit())
 #print(customSymbol('John'))
 #print(boxChanger(listInitalizer(), 'a1', 'X'))
+
+def winCheck(board: dict) -> bool:
+    if board['a1'] == board['a2'] == board['a3']:
+        return True
+    elif board['b1'] == board['b2'] == board['b3']:
+        return True
+    elif board['c1'] == board['c2'] == board['c3']:
+        return True
+    elif board['a1'] == board['b1'] == board['c1']:
+        return True
+    elif board['a2'] == board['b2'] == board['c2']:
+        return True
+    elif board['a3'] == board['b3'] == board['c3']:
+        return True
+    elif board['a1'] == board['b2'] == board['c3']:
+        return True
+    elif board['c1'] == board['b2'] == board['a3']:
+        return True
+    return False
