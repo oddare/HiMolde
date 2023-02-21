@@ -83,30 +83,35 @@ def updateScore(playerList: "list[dict]", winner: str) -> "list[dict]":
     return playerList
 
 
-def validTurnChecker(player: str, board: dict, coord: str) -> bool:
+def validTurnChecker(board: dict, coord: str) -> bool:
     print(board[coord])
     if board[coord] ==  ' ':
         return True
     return False
 
 
-def playerTurn(player: str, board: dict, symbol: str) -> dict:
-    coordinate = input(f'Which place on the board do you want to take, {player}? ')
-    if validTurnChecker(player, board, coordinate):
-        boardPrint(board)
-        pass
-    print('That slot is already taken, try again')
-    return playerTurn(player, board, symbol)
+def playerTurn(player: dict, board: dict) -> dict:
+    coordinate = input(f'Which place on the board do you want to take, {player["name"]}? ')
+    print(validTurnChecker(board, coordinate))
+    if validTurnChecker(board, coordinate):
+        board[coordinate] = player['symbol']
+        return board
+    print('That slot is already taken or does not exist, try again')
+    return playerTurn(player, board)
 
 
 def gameLoop():
     playerList = gameInit()
     baseBoard = listInitalizer()
     print(baseBoard)
-    baseBoard = playerTurn(playerList[0]['name'], baseBoard, playerList[0]['symbol'])
+    baseBoard = playerTurn(playerList[0], baseBoard)
     print(baseBoard)
-    baseBoard = boxChanger(baseBoard, playerTurn(playerList[0]['name'], baseBoard, playerList[0]['symbol']), playerList[0]['symbol'])
+    boardPrint(baseBoard)
+    baseBoard = playerTurn(playerList[1], baseBoard)
     print(baseBoard)
+    boardPrint(baseBoard)
+
+    return ''
 
 
 #boardPrint(listInitalizer())
