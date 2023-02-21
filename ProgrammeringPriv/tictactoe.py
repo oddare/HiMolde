@@ -26,11 +26,6 @@ def listInitalizer() -> dict:
     }
 
 
-def boxChanger(coords: dict, coord: str, symbol: str): # Is this required? Feed given board instead
-    coords[coord] = symbol
-    return boardPrint(coords)
-
-
 def playerCreation() -> Tuple[str, str]:
     player_one = input(f'Please provide player 1\'s name: ')
     player_two = input(f'Please provide player 2\'s name: ')
