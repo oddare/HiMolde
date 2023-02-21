@@ -122,6 +122,7 @@ def gameLoop():
     baseBoard = listInitalizer()
     turn = 1
     playing = True
+    boardPrint(baseBoard)
 
     while playing:
         turn = turn % 2
@@ -132,13 +133,6 @@ def gameLoop():
             playerList = updateScore(playerList, playerList[turn-1]["name"])
             playing = False
         turn += 1
-
-
-    baseBoard = playerTurn(playerList[0], baseBoard)
-    boardPrint(baseBoard)
-    baseBoard = playerTurn(playerList[1], baseBoard)
-    boardPrint(baseBoard)
-
     return ''
 
 gameLoop()
