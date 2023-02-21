@@ -84,7 +84,6 @@ def updateScore(playerList: "list[dict]", winner: str) -> "list[dict]":
 
 
 def validTurnChecker(board: dict, coord: str) -> bool:
-    print(board[coord])
     if board[coord] ==  ' ':
         return True
     return False
@@ -92,7 +91,6 @@ def validTurnChecker(board: dict, coord: str) -> bool:
 
 def playerTurn(player: dict, board: dict) -> dict:
     coordinate = input(f'Which place on the board do you want to take, {player["name"]}? ')
-    print(validTurnChecker(board, coordinate))
     if validTurnChecker(board, coordinate):
         board[coordinate] = player['symbol']
         return board
@@ -103,12 +101,9 @@ def playerTurn(player: dict, board: dict) -> dict:
 def gameLoop():
     playerList = gameInit()
     baseBoard = listInitalizer()
-    print(baseBoard)
     baseBoard = playerTurn(playerList[0], baseBoard)
-    print(baseBoard)
     boardPrint(baseBoard)
     baseBoard = playerTurn(playerList[1], baseBoard)
-    print(baseBoard)
     boardPrint(baseBoard)
 
     return ''
