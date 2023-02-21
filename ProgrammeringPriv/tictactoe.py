@@ -1,3 +1,7 @@
+"""
+Made by Odd, 2023-02-20
+"""
+
 from typing import Tuple
 
 def boardPrint(board: dict):
@@ -96,6 +100,12 @@ def playerTurn(player: dict, board: dict) -> dict:
 def gameLoop():
     playerList = gameInit()
     baseBoard = listInitalizer()
+    turn = 0
+
+    while True:
+        break
+
+
     baseBoard = playerTurn(playerList[0], baseBoard)
     boardPrint(baseBoard)
     baseBoard = playerTurn(playerList[1], baseBoard)
