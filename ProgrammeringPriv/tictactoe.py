@@ -1,6 +1,6 @@
 from typing import Tuple
 
-def boxPrint(board: dict):
+def boardPrint(board: dict):
     print( f"""    1   2   3
   +---+---+---+
 a | {board['a1']} | {board['a2']} | {board['a3']} |
@@ -26,9 +26,9 @@ def listInitalizer() -> dict:
     }
 
 
-def boxChanger(coords: dict, coord: str, symbol: str):
+def boxChanger(coords: dict, coord: str, symbol: str): # Is this required? Feed given board instead
     coords[coord] = symbol
-    return boxPrint(coords)
+    return boardPrint(coords)
 
 
 def playerCreation() -> Tuple[str, str]:
@@ -93,7 +93,8 @@ def validTurnChecker(player: str, board: dict, coord: str) -> bool:
 def playerTurn(player: str, board: dict, symbol: str) -> dict:
     coordinate = input(f'Which place on the board do you want to take, {player}? ')
     if validTurnChecker(player, board, coordinate):
-        return boxChanger(board, coordinate, symbol)
+        boardPrint(board)
+        pass
     print('That slot is already taken, try again')
     return playerTurn(player, board, symbol)
 
@@ -108,8 +109,8 @@ def gameLoop():
     print(baseBoard)
 
 
-boxPrint(listInitalizer())
-#print(gameLoop())
+#boardPrint(listInitalizer())
+print(gameLoop())
 #print(gameInit())
 #print(customSymbol('John'))
 #print(boxChanger(listInitalizer(), 'a1', 'X'))
