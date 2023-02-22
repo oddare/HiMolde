@@ -9,8 +9,11 @@ def budget_OK(budget: int, participants: int) -> bool:
         price += 120
     else:
         price += 130
-    price += ((participants // 4) * 200) + (participants % 4 * 200)
-    print(price)
+    price += ((participants // 4) * 200) + ((participants % 4 > 0) * 200) #Explained below
+    #If there is a remainder we wish to rent ONE extra alley
+    #AKA: If remainder then price + 200. By checking if there is a remainder (val > 0)
+    #We get True. True equals the value of 1 and we can therefor multiply by 200.
+    #If it yields false we get the expression 0 * 200 and no extra value is added
 
     if budget >= price:
         return True
@@ -25,3 +28,4 @@ print(budget_OK(2719, 50)) #False
 
 
 #Ikke fullført, 20min
+#Fullført, 24min
