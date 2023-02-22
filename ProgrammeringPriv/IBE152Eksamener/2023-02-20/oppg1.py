@@ -1,3 +1,6 @@
+"""
+Made by Odd, 2023-02-22
+"""
 visitor = {"Japanese", "Spanish"}
 employees = {1020: ["English", "Norwegian"], 667: ["English"], 2212:["Spanish"]}
 

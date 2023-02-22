@@ -1,3 +1,6 @@
+"""
+Made by Odd, 2023-02-22
+"""
 def boxmaker(n: int, a: int, b: int):
     box = []
     box += ['*']*n + ['\n']

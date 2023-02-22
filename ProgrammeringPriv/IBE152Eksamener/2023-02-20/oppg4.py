@@ -1,3 +1,6 @@
+"""
+Made by Odd, 2023-02-22
+"""
 def timeToDestination(busSchedule: list, time: int, timeLimit: int) -> list:
     timeschedule = []
     for n in range(len(busSchedule)):

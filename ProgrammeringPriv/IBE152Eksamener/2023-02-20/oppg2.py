@@ -1,3 +1,6 @@
+"""
+Made by Odd, 2023-02-22
+"""
 def budget_OK(budget: int, participants: int) -> bool:
     price = 0
     if participants <= 12:
