@@ -9,6 +9,7 @@ def timeToDestination(busSchedule: list, time: int, timeLimit: int) -> list:
             timeschedule.append(busSchedule[n])
     return timeschedule
 
+
 buses = [("701a", 10, 20), ("702a", 20, 15), ("703a", 0, 10), ("704", 38, 13)]
 now = 5
 limit = 50

@@ -20,6 +20,7 @@ def budget_OK(budget: int, participants: int) -> bool:
     else:
         return False
 
+
 print(budget_OK(0, 1)) #False
 print(budget_OK(700, 12)) #True
 print(budget_OK(699, 12)) #False

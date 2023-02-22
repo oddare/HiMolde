@@ -4,8 +4,6 @@ Made by Odd, 2023-02-22
 #Params: ["HUGO, VICTOR" , "ASIMOV, ISAAC", "URRUTIA, SEBASTIAN"], "ANA", "BARCA"
 #Returns: 1
 
-authorList = ["HUGO, VICTOR" , "ASIMOV, ISAAC", "URRUTIA, SEBASTIAN"]
-
 def lexDistance(list: list, spotOne: str, spotTwo: str) -> int:
     internalList = [spotOne, spotTwo]
     internalList.sort()
@@ -20,6 +18,8 @@ def lexDistance(list: list, spotOne: str, spotTwo: str) -> int:
         else:
             count += 1
 
+
+authorList = ["HUGO, VICTOR" , "ASIMOV, ISAAC", "URRUTIA, SEBASTIAN"]
 
 lexDistance(authorList, "BARCA", "ANA")
 

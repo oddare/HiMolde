@@ -32,6 +32,7 @@ def try2(n: int, a: int, b: int):
                 print('  ', end='')
         print()
 
+
 try2(8, 1, 4)
 
 #Ferdig, 50minutter
