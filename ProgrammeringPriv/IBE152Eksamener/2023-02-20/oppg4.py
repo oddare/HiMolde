@@ -11,3 +11,5 @@ now = 5
 limit = 50
 
 print(timeToDestination(buses, now, limit))
+
+#Ferdig, 1t 02m - Trekkk fra tidligere
