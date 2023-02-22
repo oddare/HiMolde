@@ -1,7 +1,9 @@
 def boxmaker(n: int, a: int, b: int):
-    box = ''
-    for i in range(0, n):
-        box += '*'
+    box = []
+    box += ['*']*n
     print(box)
+    for i in box:
+        boxShow = i
+    print(boxShow)
 
 boxmaker(8, 1, 4)
