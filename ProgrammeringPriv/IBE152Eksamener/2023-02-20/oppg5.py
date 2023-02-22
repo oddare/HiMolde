@@ -1,7 +1,7 @@
 """
 Made by Odd, 2023-02-22
 """
-def boxmaker(n: int, a: int, b: int):
+def boxmaker(n: int, a: int, b: int): #Defunct, doesn't work, confused myself
     box = []
     box += ['*']*n + ['\n']
     for i in range(n-2):
