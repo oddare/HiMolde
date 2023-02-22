@@ -1,5 +1,8 @@
 """
 Made by Odd, 2023-02-22
+
+# Status: Fullført
+# Brukt: 25 minutter
 """
 #Params: ["HUGO, VICTOR" , "ASIMOV, ISAAC", "URRUTIA, SEBASTIAN"], "ANA", "BARCA"
 #Returns: 1
@@ -22,5 +25,3 @@ def lexDistance(list: list, spotOne: str, spotTwo: str) -> int:
 authorList = ["HUGO, VICTOR" , "ASIMOV, ISAAC", "URRUTIA, SEBASTIAN"]
 
 lexDistance(authorList, "BARCA", "ANA")
-
-#45min på klokka, fjern fra tidligere oppgaver

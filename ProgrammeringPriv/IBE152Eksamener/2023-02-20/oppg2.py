@@ -1,5 +1,8 @@
 """
 Made by Odd, 2023-02-22
+
+# Status: Fullført
+# Brukt: 24 minutter
 """
 def budget_OK(budget: int, participants: int) -> bool:
     price = 0
@@ -26,7 +29,3 @@ print(budget_OK(700, 12)) #True
 print(budget_OK(699, 12)) #False
 print(budget_OK(2721, 50)) #True
 print(budget_OK(2719, 50)) #False
-
-
-#Ikke fullført, 20min
-#Fullført, 24min

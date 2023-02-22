@@ -1,5 +1,8 @@
 """
 Made by Odd, 2023-02-22
+
+# Status: Fullført
+# Brukt: 48 minutter (30 på boxmaker() og 18 på try2())
 """
 def boxmaker(n: int, a: int, b: int): #Defunct, doesn't work, confused myself
     box = []
@@ -34,5 +37,3 @@ def try2(n: int, a: int, b: int):
 
 
 try2(8, 1, 4)
-
-#Ferdig, 50minutter

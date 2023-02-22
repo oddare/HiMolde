@@ -1,5 +1,8 @@
 """
 Made by Odd, 2023-02-22
+
+# Status: Fullført
+# Brukt: 17 minutter
 """
 def timeToDestination(busSchedule: list, time: int, timeLimit: int) -> list:
     timeschedule = []
@@ -15,5 +18,3 @@ now = 5
 limit = 50
 
 print(timeToDestination(buses, now, limit))
-
-#Ferdig, 1t 02m - Trekkk fra tidligere
