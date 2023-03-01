@@ -3,4 +3,4 @@ def weekDay(day: str, num: int) -> int:
     val =  (week.index(day) + num) % 7
     return week[val]
 
-print(weekDay('Tue', 1))
+print(weekDay('Tue', 5))
