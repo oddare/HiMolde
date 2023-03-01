@@ -1,4 +1,6 @@
-def swapper(s: str, c: str: pos: int) -> str:
-    
+def swapper(s: str, c: str, pos: int) -> str:
+    first = s[0:pos]
+    print(first)
+
 
 print(swapper('....', 'A', 2)) # -> ..A..
