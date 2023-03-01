@@ -1,5 +1,6 @@
-def weekDay(day: str) -> int:
+def weekDay(day: str, num: int) -> int:
     list = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    return list.index(day)
+    val =  list.index(day)
+    return val
 
 print('Tue')
