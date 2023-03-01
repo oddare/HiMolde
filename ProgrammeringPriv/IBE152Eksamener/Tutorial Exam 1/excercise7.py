@@ -1,5 +1,5 @@
 def numCheck(sortedList: list) -> int:
-
+    endNum = len(sortedList) + 1
     return
 
 
