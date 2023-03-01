@@ -1,6 +1,6 @@
 def numCheck(sortedList: list) -> int:
     endNum = len(sortedList) + 1
-    
+    gauss = endNum / 2 * (endNum + 1)
     return
 
 
