@@ -82,6 +82,11 @@ def updateScore(playerList: "list[dict]", winner: str) -> "list[dict]":
     return playerList
 
 
+def showScore(playerList: 'list[dict]'):
+    print(f"{playerList[0]['name']}\'s score is {playerList[0]['score']}.\n{playerList[1]['name']}\'s score is {playerList[1]['score']}.")
+    return ''
+
+
 def validTurnChecker(board: dict, coord: str) -> bool:
     if board[coord] ==  ' ':
         return True
@@ -117,12 +122,9 @@ def winCheck(board: dict, symbol: str) -> bool:
     return False
 
 
-def gameLoop():
-    playerList = gameInit()
-    baseBoard = listInitalizer()
+def gameLoop(playerList: dict, baseBoard: dict) -> dict:
     turn = 1
     playing = True
-    boardPrint(baseBoard)
 
     while playing:
         turn = turn % 2
@@ -133,6 +135,12 @@ def gameLoop():
             playerList = updateScore(playerList, playerList[turn-1]["name"])
             playing = False
         turn += 1
-    return ''
+    return playerList
 
-gameLoop()
+
+
+if __name__ == '__main__':
+    baseBoard = listInitalizer()
+    boardPrint(baseBoard)
+    playerList = gameLoop(gameInit(), baseBoard)
+    showScore(playerList)
