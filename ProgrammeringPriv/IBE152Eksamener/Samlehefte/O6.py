@@ -1,5 +1,5 @@
 def triangle(a: int, b: int, c: int) -> str:
-    if not a + b > c or b + c > a or c + a > b:
+    if a + b < c or b + c < a or c + a < b:
         return 'Invalid'
     if a == b == c:
         return 'Equilateral'
@@ -7,7 +7,6 @@ def triangle(a: int, b: int, c: int) -> str:
         return 'Isosceles'
     if a != b and b != c and c != a:
         return 'Scalene'
-    return
 
 
 print(triangle(2, 7, 12))
