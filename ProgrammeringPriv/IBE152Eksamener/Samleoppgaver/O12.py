@@ -1,0 +1,1 @@
+def budget_OK(budget: int, participants: int) -> bool:
