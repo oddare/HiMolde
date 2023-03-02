@@ -1,5 +1,5 @@
 def checkSum(a: int, b: int, c: int) -> bool:
-    if (a + b) >= c:
+    if (a + b) >= c or c % 2 == 0:
         return True
     return False
 
