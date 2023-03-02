@@ -6,3 +6,6 @@ def program():
     list.pop(-1)
 
     print(list)
+
+
+program()
