@@ -4,4 +4,4 @@ def listCheck(numlist: list, num: int) -> int:
     return -1
 
 
-print(listCheck())
+print(listCheck([1, 2, 3, 4, 5], 3))
