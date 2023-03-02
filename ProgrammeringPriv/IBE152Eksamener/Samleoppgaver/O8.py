@@ -3,6 +3,6 @@ def isPosDiv(num: int) -> bool:
         return True
     return False
 
-print(isPosDiv(10))
-print(isPosDiv(-1))
-print(isPosDiv(5))
+print(isPosDiv(10)) #True
+print(isPosDiv(-1)) #False
+print(isPosDiv(5))  #False
