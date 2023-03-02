@@ -1,7 +1,7 @@
 def clock(seconds: int) -> str:
-    hours = (seconds // 3600)
-    minutes = (seconds // 60) % 60
-    seconds = seconds % 60
+    hours = int((seconds // 3600))
+    minutes = int((seconds // 60) % 60)
+    seconds = int(seconds % 60)
     return f''
 
 
