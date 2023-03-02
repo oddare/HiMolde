@@ -2,7 +2,7 @@ def numCheck(sortedList: list) -> int:
     endNum = len(sortedList) + 1
     gauss = endNum / 2 * (endNum + 1)
     listSum = sum(sortedList) #Can we use sum()?
-    return gauss - listSum
+    return int(gauss - listSum)
 
 
 list = [1, 2, 3, 4, 6, 7, 8, 9, 10] #Missing 5
