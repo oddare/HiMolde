@@ -1,5 +1,5 @@
 def daisyGame(petals: int) -> int:
-    return (petals + 1) % 2
+    return ((petals + 1) % 2) + 1
 
 
 print(daisyGame(3)) # 1
