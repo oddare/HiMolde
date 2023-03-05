@@ -1,1 +1,14 @@
-[{"score":{"name":"*","objective":"Health"}},{"score":{"name":"*","objective":"Food"}}]
+[
+    {
+        "score":{
+            "name":"*",
+            "objective":"Health"
+        }
+    },
+    {
+        "score":{
+            "name":"*",
+            "objective":"Food"
+        }
+    }
+]
