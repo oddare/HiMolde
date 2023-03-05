@@ -4,7 +4,7 @@
             "name":"*",
             "objective":"Health"
         }
-    },{"text":"♥","color":"red"},
+    },{"text":"❤","color":"red"},
     {
         "score":{
             "name":"*",
@@ -13,5 +13,5 @@
     },{"text":"🍖","color":"#ac7233"}
 ]
 
-{"text":"♥","color":"red"}
+{"text":"❤","color":"red"}
 {"text":"🍖","color":"#ac7233"}
