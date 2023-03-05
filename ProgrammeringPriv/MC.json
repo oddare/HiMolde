@@ -4,13 +4,14 @@
             "name":"*",
             "objective":"Health"
         }
-    },
+    },{"text":"🧡","color":"red"},
     {
         "score":{
             "name":"*",
             "objective":"Food"
         }
-    }
+    },{"text":"🍖","color":"#ac7233"}
 ]
 
-{"text":"❤","color":"red"}
+{"text":"🧡","color":"red"}
+{"text":"🍖","color":"#ac7233"}
