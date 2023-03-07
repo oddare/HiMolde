@@ -1,7 +1,7 @@
 [
     {
         "score":{
-            "name":"*",
+            "name":"@p",
             "objective":"Health"
         }
     },
@@ -14,7 +14,7 @@
     },
     {
         "score":{
-            "name":"*",
+            "name":"@p",
             "objective":"Food"
         }
     },
