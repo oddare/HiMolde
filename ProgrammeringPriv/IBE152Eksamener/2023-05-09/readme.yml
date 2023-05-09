@@ -1,3 +1,6 @@
 
 Bemerkes at det i oppgave 4 ble etterspurt om å legge til indexplasseringer som tupler, her har det glippet og de har blitt lagt til som en liste.
 Forskjellen er at det skal stå "common[itemA] = (pos1, pos2)" og ikke "common[itemA] = [pos1, pos2]" på linje 9.
+
+
+Bemerker også at innleveringer kun består av funksjoner, mens det her er lastet opp hele filer med prints and variabler.
